@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Statistiques</title>
+    <link rel="stylesheet" href="style.css"> <!-- Lien vers votre fichier de styles CSS -->
+</head> 
+<body>
+    <div class="container">
+        <!-- Cadre Discord -->
+        <div class="frame discord">
+            <h2>Discord</h2>
+            <img src="discord-icon.png" alt="Discord Icon" class="clock-icon">
+        </div>
+
+        <!-- Cadre YouTube -->
+        <div class="frame youtube">
+            <h2>YouTube</h2>
+            <div class="banner">
+                <p class="subscribers-count">100,000</p>
+                <p class="update-info">Mises à jour régulières</p>
+            </div>
+            <img src="youtube-icon.png" alt="YouTube Icon" class="clock-icon">
+        </div>
+
+        <!-- Cadre Twitter -->
+        <div class="frame twitter">
+            <h2>Twitter</h2>
+            <img src="twitter-icon.png" alt="Twitter Icon" class="clock-icon">
+        </div>
+
+        <!-- Cadre "Coming Soon" -->
+        <div class="frame coming-soon">
+            <h2>Coming Soon</h2>
+            <p class="coming-soon-text">Texte factice que vous pouvez personnaliser</p>
+        </div>
+    </div>
+</body>
+</html>

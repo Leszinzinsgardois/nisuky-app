@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style pour le cadre Devlog */
+.devlog {
+    background-color: #f2f2f2; /* Couleur de fond légèrement grisé */
+    border: 1px solid #ccc; /* Bordure légère */
+    border-radius: 5px; /* Coins arrondis */
+    padding: 10px;
+    margin: 10px;
+}
+
+/* Style pour le cadre du bouton (peut être personnalisé en vert ou violet) */
+.button-box {
+    display: inline-block;
+    background-color: #0074D9; /* Couleur verte */
+    border-radius: 20px; /* Coins arrondis */
+    color: #fff; /* Couleur du texte en blanc */
+    font-weight: bold;
+    padding: 5px 10px; /* Marge interne du bouton */
+    margin-right: 10px;
+    font-size: 12px;
+}
+
+.button-box.violet {
+    background-color: #6a0dad; /* Couleur violette */
+}
+
+.button-box.vert {
+    background-color: #15853a; /* Couleur violette */
+}
+
+/* Style pour le bouton (flèche vers le bas ou le haut) */
+.button-box::before {
+    content: "◄"; /* Flèche inclinée vers le bas par défaut */
+    display: inline-block;
+    transform: rotate(90deg); /* Incline la flèche vers le bas */
+    margin-right: 5px;
+}
+
+/* Style pour le cadre de contenu (peut être ouvert ou fermé) */
+.content-box {
+    display: none; /* Par défaut, le cadre est fermé (non visible) */
+}
+
+/* Style pour le cadre de contenu ouvert */
+.devlog.open .content-box {
+    display: block; /* Lorsqu'il est ouvert, le cadre est visible */
+}

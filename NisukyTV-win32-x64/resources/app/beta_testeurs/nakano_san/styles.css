@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    transition: background-color 0.3s, color 0.3s; /* Animation pour la transition du mode sombre */
+}
+
+/* Styles pour l'en-tête */
+.header {
+    text-align: center;
+}
+
+.profile-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+/* Styles pour le bouton de mode sombre */
+button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer; /* Curseur pointeur pour indiquer la possibilité de cliquer */
+}
+
+/* Styles pour le récapitulatif des rôles */
+.roles-summary {
+    text-align: center;
+}
+
+.role {
+    display: inline-flex;
+    align-items: center;
+    margin: 5px;
+    padding: 10px; /* Ajout de marges internes pour créer des cadres */
+    border: 1px solid #ccc; /* Bordure pour le cadre */
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); /* Ombre légère */
+}
+
+.role-badge {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+/* Styles pour l'identifiant du compte */
+.account-id {
+    float: left;
+    margin: 10px;
+    padding: 10px;
+    background-color: #3498db;
+    border-radius: 5px;
+    color: #fff;
+}
+
+/* Styles pour les dates d'adhésion */
+.join-dates {
+    float: right;
+    padding: 10px;
+}
+
+.server-join {
+    display: flex;
+    align-items: center;
+}
+
+.server-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+.gray-box {
+    background-color: #f0f0f0; /* Couleur de fond légèrement grise */
+    padding: 10px;
+    border: 1px solid #ccc; /* Bordure pour le cadre */
+    border-radius: 5px;
+    margin: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); /* Ombre légère */
+}
+
+/* Styles pour le mode sombre */
+.dark-mode {
+    background-color: #333; /* Couleur de fond sombre */
+    color: #fff; /* Texte en mode sombre */
+    
+    /* Styles spécifiques au mode sombre */
+    .role {
+        border: 1px solid #555; /* Bordure sombre pour les cadres de rôle en mode sombre */
+        box-shadow: none; /* Retirez l'ombre en mode sombre */
+    }
+
+    .account-id {
+        background-color: #555; /* Arrière-plan sombre pour l'identifiant du compte en mode sombre */
+    }
+
+    .gray-box {
+        background-color: #555; /* Couleur de fond légèrement grise en mode sombre */
+        border: 1px solid #888; /* Bordure sombre */
+    }
+}
