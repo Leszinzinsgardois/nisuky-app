@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Connexion - Mon Espace Bêta Testeur</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Connexion à mon espace Bêta Testeur</h1>
+        <p>Je me connecte à mon compte en fournissant mon identifiant (pseudo serveur) et mon mot de passe fourni par le Bot NisukyTV.</p>
+        
+        <div class="input-container">
+            <input type="text" id="identifiant" placeholder="Identifiant (pseudo serveur)">
+            <input type="password" id="motDePasse" placeholder="Mot de passe">
+        </div>
+
+        <button id="connexionButton">Me Connecter</button>
+        <p id="message"></p>
+
+        <div class="footer">
+            <p>Cette fonctionnalité peut contenir de nombreux bugs car elle est encore en version Bêta.</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('connexionButton').addEventListener('click', () => {
+            const identifiant = document.getElementById('identifiant').value;
+            const motDePasse = document.getElementById('motDePasse').value;
+
+            // Remplace ces valeurs par les identifiants et mots de passe corrects
+            const utilisateurs = [
+                { id: 'alex_minec', motDePasse: 'AFhhhufzhUhdz62538Nf.ff' },
+                { id: 'ylian_la_casse', motDePasse: 'JBZEYHGBHè-273nzrhg762.' },
+                { id: 'nakano_san', motDePasse: 'HEHFY-ef73-ehfheE' },
+                { id: 'risk_angel25', motDePasse: 'uzefygYETGF6527.ghd-(e' },
+
+
+                // Ajoute d'autres utilisateurs ici
+            ];
+
+            let utilisateurTrouve = false;
+
+            utilisateurs.forEach((utilisateur) => {
+                if (identifiant === utilisateur.id && motDePasse === utilisateur.motDePasse) {
+                    utilisateurTrouve = true;
+                    window.location.href = identifiant + '/user.html';
+                }
+            });
+
+            if (!utilisateurTrouve) {
+                document.getElementById('message').textContent = 'Mot de passe/identifiant incorrect';
+                document.getElementById('message').style.color = 'white';
+                document.getElementById('message').style.backgroundColor = 'rgba(255, 0, 0, 0.7)';
+            }
+        });
+    </script>
+</body>
+</html>

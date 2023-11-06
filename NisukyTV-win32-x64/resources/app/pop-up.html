@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Annonce de Maintenance</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="styles.css" type="text/css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="announcement">
+            <h1>Annonce de Maintenance / Utilisation de Bêta</h1>
+            <p> En raison d'une maintenance en cours ou programmée ou encore de l'utilisation d'une version Bêta, des erreurs peuvent survenir. Veuillez excuser la gêne occasionnée et en notifier les développeurs</p>
+            <br>
+            <p>Précisions adressées aux Bêta Testeurs:</p>
+            <p>L'application ne dispose pas encore des ses pages Evenements, etc... (des pages affichées dans les menus)</p>
+            <button id="close-button">Fermer</button>
+        </div>
+        <script>
+            //Ajout du gestionnaire d'évènements
+            document.getElementById('close-button').addEventListener('click', function () {
+                window.close(); // A l'issue de cette action on ferme la fenêtre
+            });
+            </script>
+    </body>
+</html>

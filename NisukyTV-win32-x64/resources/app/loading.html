@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Chargement de l'application</title>
+    <link rel="stylesheet" type="text/css" href="loading.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="loading-container">
+        <h1>Nisuky TV</h1>
+        <div class="loading-spinner"></div>
+        <p id="loading-text">Chargement en cours...</p>
+        <p>Bêta 0.1</p>
+    </div>
+
+    <script>
+        const loadingText = document.getElementById('loading-text');
+        const loadingSpinner = document.querySelector('.loading-spinner'); // Sélectionnez le spinner par sa classe
+
+        const paragraphs = [
+            "Chargement en cours...",
+            "Récupération des données...",
+            "Appel des API",
+            "Recherche des Mises à Jour",
+            "Démarrage..."
+        ];
+
+        let index = 1;
+
+        function showNextParagraph() {
+            if (index < paragraphs.length) {
+                loadingText.textContent = paragraphs[index];
+                index++;
+
+                if (index === paragraphs.length) {
+                    loadingSpinner.style.borderTopColor = "#00FF00"; // Couleur verte
+                }
+
+                setTimeout(showNextParagraph, 2000);
+            }
+        }
+
+        showNextParagraph();
+    </script>
+</body>
+</html>

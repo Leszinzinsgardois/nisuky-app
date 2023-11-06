@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Créateur: Nakano San</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script> <!-- Incluez Vue.js -->
+</head>
+<body>
+    <div id="app">
+        <!-- Zone d'en-tête avec le nom et l'icône du profil -->
+        <div class="header">
+            <img class="profile-icon" :src="profileIconUrl" alt="Icône du profil">
+            <h1>{{ accountName }}</h1>
+        </div>
+        <!-- Bouton pour activer/désactiver le mode sombre -->
+        <button @click="toggleDarkMode">{{ darkMode ? 'Mode Clair' : 'Mode Sombre' }}</button>
+        <!-- Zone de récapitulatif des rôles -->
+        <div class="roles-summary">
+            <h2>Récapitulatif des rôles</h2>
+            <div class="roles-list">
+                <div v-for="role in roles" class="role">
+                    <div class="role-badge" :style="{ backgroundColor: role.color }"></div>
+                    <p class="role-name">{{ role.name }}</p>
+                </div>
+            </div>
+            <p class="roles-updated">Liste des rôles arrêtée au {{ rolesUpdatedAt }}</p>
+        </div>
+        <!-- Zone d'affichage de l'identifiant et des dates d'adhésion -->
+        <div class="account-info">
+            <div class="account-id">
+                <div class="discord-blue-bg">
+                    <p class="account-id-value">ID du compte: {{ accountId }}</p>
+                </div>
+            </div>
+            <div class="join-dates">
+                <div class="gray box">
+                    <div class="server-join">
+                        <img class="server-icon" :src="serverIconUrl" alt="Icône du serveur">
+                        <p class="join-date">Rejoint le serveur le {{ serverJoinDate }}</p>
+                    </div>
+                    <div class="beta-join">
+                        <p class="join-date">Rejoint la bêta le {{ betaJoinDate }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
